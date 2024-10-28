@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "login": "standard_user",
+        "password": "secret_sauce"
+    },
+    {
+        "id": 2,
+        "login": "locked_out_user",
+        "password": "secret_sauce"
+    },
+    {
+        "id": 3,
+        "login": "problem_user",
+        "password": "secret_sauce"
+    },
+    {
+        "id": 4,
+        "login": "performance_glitch_user",
+        "password": "secret_sauce"
+    },
+    {
+        "id": 5,
+        "login": "error_user",
+        "password": "secret_sauce"
+    },
+    {
+        "id": 6,
+        "login": "visual_user",
+        "password": "secret_sauce"
+    }
+]
