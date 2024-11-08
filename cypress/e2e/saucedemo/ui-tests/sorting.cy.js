@@ -26,7 +26,7 @@ describe('Sorting tests', () => {
     cy.loginAsStandarUserd();
     onInventory.getSortingContainer().select('Name (A to Z)')
     onInventory.getName().then(($names) => {
-      const names = [...$names].map(price => price.innerText.trim(''));
+      const names = [...$names].map(name => name.innerText.trim(''));
       const isSorted = names.every((name, i) => i === 0 || name >= names[i - 1]);
       expect(isSorted).to.be.true
     });
@@ -36,7 +36,7 @@ describe('Sorting tests', () => {
     cy.loginAsStandarUserd();
     onInventory.getSortingContainer().select('Name (Z to A)')
     onInventory.getName().then(($names) => {
-      const names = [...$names].map(price => price.innerText.trim(''));
+      const names = [...$names].map(name => name.innerText.trim(''));
       const isSorted = names.every((name, i) => i === 0 || name <= names[i - 1]);
       expect(isSorted).to.be.true
     });
