@@ -4,6 +4,10 @@ export class inventory {
         return cy.get(".app_logo");
     };
 
+    getTitle() {
+        return cy.get('[class="title"]');
+    }
+
     getSortingContainer() {
         return cy.get('[data-test="product-sort-container"]');
     };
