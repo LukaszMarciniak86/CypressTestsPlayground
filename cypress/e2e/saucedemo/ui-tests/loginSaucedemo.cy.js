@@ -22,14 +22,9 @@ describe('Log in tests for different users', () => {
     });
   });
 
-
-  beforeEach(() =>{
-    cy.log("dupa")
-  })
-
   it('Log in as Standard User', () => {
     cy.loginToSaucedemo(standardUser.login, standardUser.password);
-    onInventory.getAppLogo().should('be.visible').and('have.text', 'Swag Labs');
+    onInventory.getTitle().should('be.visible').and('have.text', 'Products');
   });
 
   it('Log in as Locked Out User', () => {
@@ -39,26 +34,21 @@ describe('Log in tests for different users', () => {
 
   it('Log in as Problem User', () => {
     cy.loginToSaucedemo(problemUser.login, problemUser.password);
-    onInventory.getAppLogo().should('be.visible').and('have.text', 'Swag Labs');
+    onInventory.getTitle().should('be.visible').and('have.text', 'Products');
   });
 
   it('Log in as Performance Glitch User', () => {
     cy.loginToSaucedemo(performanceGlitchUser.login, performanceGlitchUser.password);
-    onInventory.getAppLogo().should('be.visible').and('have.text', 'Swag Labs');
+    onInventory.getTitle().should('be.visible').and('have.text', 'Products');
   });
 
   it('Log in as Error User', () => {
     cy.loginToSaucedemo(errorUser.login, errorUser.password);
-    onInventory.getAppLogo().should('be.visible').and('have.text', 'Swag Labs');
+    onInventory.getTitle().should('be.visible').and('have.text', 'Products');
   });
 
   it('Log in as Visual User', () => {
     cy.loginToSaucedemo(visualUser.login, visualUser.password);
-    onInventory.getAppLogo().should('be.visible').and('have.text', 'Swag Labs');
-  });
-
-  it('Log in as Visual User', () => {
-    cy.loginAsStandarUserd(visualUser.login, visualUser.password);
-   
+    onInventory.getTitle().should('be.visible').and('have.text', 'Products');
   });
 });
