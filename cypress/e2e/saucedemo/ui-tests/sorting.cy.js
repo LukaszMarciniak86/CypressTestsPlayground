@@ -41,7 +41,4 @@ describe('Sorting tests', () => {
       expect(isSorted).to.be.true
     });
   });
-
-
-
 });
